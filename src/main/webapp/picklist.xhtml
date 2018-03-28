@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"      
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    template="menu.xhtml">
+
+        <ui:define name="general_content">
+        	<h:form>
+			    <h3 style="margin-top: 0">Basic PickList</h3>
+			    <p:pickList id="pickList" value="#{picklistView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
+			 
+			    <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />
+			    
+			    <br />
+			    <br />
+			    <br />
+			    
+			    <h:outputLink value="https://www.primefaces.org/showcase/ui/data/pickList.xhtml" target="_blank">More examples and information at Primefaces ShowCase</h:outputLink>
+			 
+			    <p:dialog modal="true" showEffect="fade" hideEffect="fade" widgetVar="cityDialog">
+			        <h:panelGrid id="displayCities" columns="2">
+			            <h:outputText value="Source: " style="font-weight:bold" />
+			             <ui:repeat value="#{picklistView.cities.source}" var="item">
+			                <h:outputText value="#{item}" style="margin-right:5px" />
+			            </ui:repeat>
+			 
+			            <h:outputText value="Target: " style="font-weight:bold" />
+			            <ui:repeat value="#{picklistView.cities.target}" var="item">
+			                <h:outputText value="#{item}" style="margin-right:5px" />
+			            </ui:repeat>
+			        </h:panelGrid>
+			    </p:dialog>
+			</h:form>
+        </ui:define>
+
+</ui:composition>

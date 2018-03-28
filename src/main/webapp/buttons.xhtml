@@ -1,0 +1,68 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"      
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    template="menu.xhtml">
+
+        <ui:define name="general_content">
+	        <h:form>
+	        	<!-- Simple Buttons -->
+		        <fieldset style="margin-bottom: 15px">
+		        	<legend><h3>Buttons</h3></legend>
+		        	<p:button style="margin-right:15px" value="With Icon" icon="ui-icon-star">
+					    <f:param name="productId" value="20" />
+					</p:button>
+					 
+					<p:button style="margin-right:15px" icon="ui-icon-star" title="Icon Only">
+					    <f:param name="productId" value="30" />
+					</p:button>
+					 
+					<p:button value="Bookmark" icon="ui-icon-star" disabled="true">
+					    <f:param name="productId" value="40" />
+					</p:button>
+		        </fieldset>
+		        
+		        <!-- Command Link Buttons -->
+		        <fieldset style="margin-bottom: 15px">
+		        	<legend><h3>Command Link</h3></legend>
+		        	<p:commandLink style="padding-right:15px" id="ajax" update="messages" actionListener="#{buttonsView.buttonAction}">
+				        <h:outputText value="Ajax Submit" />
+				    </p:commandLink>
+				 
+				    <p:commandLink id="nonAjax" actionListener="#{buttonsView.buttonAction}" ajax="false">
+				        <h:outputText value="Non-Ajax Submit" />
+				    </p:commandLink>
+		        </fieldset>
+		        
+		        <!-- Split Buttons -->
+		        <fieldset style="margin-bottom: 15px">
+					<legend><h3>SplitButtons</h3></legend>
+					<p:splitButton value="Save" actionListener="#{buttonsView.save}" update="messages" icon="ui-icon-disk">
+				        <p:menuitem value="Update" actionListener="#{buttonsView.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />
+				        <p:menuitem value="Delete" actionListener="#{buttonsView.delete}" ajax="false" icon="ui-icon-close" />
+				        <p:separator />
+				        <p:menuitem value="Homepage" action="index?faces-redirect=true" icon="ui-icon-extlink" />
+				    </p:splitButton>	        
+		        </fieldset>
+		        
+		        <!-- Command Buttons -->
+		        <fieldset style="margin-bottom: 15px">
+					<legend><h3>CommandButtons</h3></legend>
+					<p:commandButton value="Ajax Submit" id="ajax2" update="messages" actionListener="#{buttonsView.buttonAction}" styleClass="ui-priority-primary" />
+				    <p:commandButton value="Non-Ajax Submit" id="nonAjax2" actionListener="#{buttonsView.buttonAction}" ajax="false" />
+				    <p:commandButton value="With Icon" id="withIcon2" actionListener="#{buttonsView.buttonAction}" update="messages" icon="ui-icon-disk" />
+				    <p:commandButton actionListener="#{buttonsView.buttonAction}" id="iconOnly2" update="messages" icon="ui-icon-disk" title="Icon Only" />
+				    <p:commandButton value="Disabled" id="disabled2" disabled="true" />	        
+		        </fieldset>
+				 
+				 <!-- Link -->
+		        <fieldset style="margin-bottom: 15px">
+					<legend><h3>Link</h3></legend>
+					<p:link value="Bookmark">
+					    <f:param name="productId" value="10" />
+					</p:link>	        
+		        </fieldset>
+		    </h:form>
+        </ui:define>
+</ui:composition>

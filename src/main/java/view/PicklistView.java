@@ -1,0 +1,76 @@
+package view;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
+
+import org.primefaces.event.SelectEvent;
+import org.primefaces.event.TransferEvent;
+import org.primefaces.event.UnselectEvent;
+import org.primefaces.model.DualListModel;
+
+@Named
+@ViewScoped
+public class PicklistView implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+    
+    private DualListModel<String> cities;
+     
+    @PostConstruct
+    public void init() {
+        //Cities
+        List<String> citiesSource = new ArrayList<String>();
+        List<String> citiesTarget = new ArrayList<String>();
+         
+        citiesSource.add("San Francisco");
+        citiesSource.add("London");
+        citiesSource.add("Paris");
+        citiesSource.add("Istanbul");
+        citiesSource.add("Berlin");
+        citiesSource.add("Barcelona");
+        citiesSource.add("Rome");
+         
+        cities = new DualListModel<String>(citiesSource, citiesTarget);
+         
+    }
+ 
+    public DualListModel<String> getCities() {
+        return cities;
+    }
+ 
+    public void setCities(DualListModel<String> cities) {
+        this.cities = cities;
+    }
+ 
+     
+    public void onTransfer(TransferEvent event) {        
+        FacesMessage msg = new FacesMessage();
+        msg.setSeverity(FacesMessage.SEVERITY_INFO);
+        msg.setSummary("Items Transferred");
+         
+        FacesContext.getCurrentInstance().addMessage(null, msg);
+    } 
+ 
+    public void onSelect(SelectEvent event) {
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected", event.getObject().toString()));
+    }
+     
+    public void onUnselect(UnselectEvent event) {
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected", event.getObject().toString()));
+    }
+     
+    public void onReorder() {
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "List Reordered", null));
+    } 
+
+}
