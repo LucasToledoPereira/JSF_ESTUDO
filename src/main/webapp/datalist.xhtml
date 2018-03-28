@@ -6,6 +6,8 @@
     template="menu.xhtml">
 
         <ui:define name="general_content">
+        
+        	<h2>Data - DataList</h2>
         	<h:form id="form_in">
 			    <p:dataList value="#{dataListView.cars1}" var="car" type="ordered">
 			        <f:facet name="header">
@@ -35,7 +37,7 @@
 			 
 			    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="blind" hideEffect="explode" resizable="false">
 			        <p:outputPanel id="carDetail" style="text-align:center;">
-			            <p:panelGrid  columns="2" rendered="#{not empty dataListView.selectedCar}" columnClasses="label,value">
+			            <p:panelGrid  columns="2" columnClasses="label,value">
 			 
 			                <h:outputText value="Id:" />
 			                <h:outputText value="#{dataListView.selectedCar.id}" />

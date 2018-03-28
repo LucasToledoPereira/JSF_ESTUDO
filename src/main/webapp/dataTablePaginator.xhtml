@@ -6,6 +6,7 @@
     template="menu.xhtml">
 
         <ui:define name="general_content">
+        	<h2>Data - DataTable With Paginator</h2>
         	<p:dataTable var="car" value="#{dataTableBasic.cars}" rows="10"
                          paginator="true"
                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
