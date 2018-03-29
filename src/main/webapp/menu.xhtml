@@ -6,43 +6,56 @@
 
     <h:head>
     	<h:outputStylesheet name="css/style.css"/>
+    	<h:outputStylesheet name="css/lightthemes.css"/>
+    	<h:outputStylesheet name="css/darkthemes.css"/>
+    	<h:outputStylesheet name="css/specialthemes.css"/>
     	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key= AIzaSyDdv1L9MvCFNd5G0sOxk7QzWQvGKtDehXM "></script>
     	<p:importConstants type="enums.MenuButtons" var="MenuButtons" />
-    	<title>Show Case Estudo</title>
+    	<title>#{textResources['app.title']}</title>
+    	<f:view locale="#{menuView.locale}"/>
     </h:head>
 
-    <h:body>   	
+    <h:body class="theme_#{menuView.theme}">   	
     	<p:growl id="messages"/>
     	<h:form class="menu_form">
     		<div class="header">
-	    		<p:menubar>
-	    			<p:menuitem value="Inicio" action="index?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.INICIO)? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.INICIO)}"/>
-		    		<p:menuitem value="Dashboard" action="dashboard?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.DASHBOARD) ? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.DASHBOARD)}"/>
-		    		<p:menuitem value="Buttons" action="buttons?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.BUTTONS)? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.BUTTONS)}"/>
-		    		<p:submenu label="Data" class="#{menuView.selectedItem.equals(MenuButtons.DATA) ? 'active': ''}">
-		    			<p:menuitem value="Carousel" action="carousel?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:menuitem value="DataList" action="datalist?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:submenu label="DataTable">
-			    			<p:menuitem value="Basic" action="dataTableBasic?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-			    			<p:menuitem value="Paginator" action="dataTablePaginator?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-			    			<p:menuitem value="Reorder" action="dataTableReorder?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-			    			<p:menuitem value="More Examples" target="_blank" url="https://www.primefaces.org/showcase/ui/data/datatable/basic.xhtml" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>		    				
+	    		<p:menubar id="menubar">
+	    			<p:menuitem value="#{textResources['menu.inicio']}" action="index?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.INICIO)? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.INICIO)}"/>
+		    		<p:menuitem value="#{textResources['menu.dashboard']}" action="dashboard?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.DASHBOARD) ? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.DASHBOARD)}"/>
+		    		<p:menuitem value="#{textResources['menu.buttons']}" action="buttons?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.BUTTONS)? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.BUTTONS)}"/>
+		    		<p:submenu label="#{textResources['menu.data']}" class="#{menuView.selectedItem.equals(MenuButtons.DATA) ? 'active': ''}">
+		    			<p:menuitem value="#{textResources['menu.data.carousel']}" action="carousel?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:menuitem value="#{textResources['menu.data.dataList']}" action="datalist?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:submenu label="#{textResources['menu.data.dataTable']}">
+			    			<p:menuitem value="#{textResources['menu.data.dataTable.basic']}" action="dataTableBasic?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+			    			<p:menuitem value="#{textResources['menu.data.dataTable.paginator']}" action="dataTablePaginator?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+			    			<p:menuitem value="#{textResources['menu.data.dataTable.reorder']}" action="dataTableReorder?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+			    			<p:menuitem value="#{textResources['app.more.example']}" target="_blank" url="https://www.primefaces.org/showcase/ui/data/datatable/basic.xhtml" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>		    				
 		    			</p:submenu>
-		    			<p:menuitem value="PickList" action="picklist?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:menuitem value="Organigram" action="organigram?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:menuitem value="Timeline" action="timeline?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:menuitem value="GMap" action="gmap?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
-		    			<p:menuitem value="More Data Examples" url="https://www.primefaces.org/showcase/" target="_blank"/>
+		    			<p:menuitem value="#{textResources['menu.pickList']}" action="picklist?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:menuitem value="#{textResources['menu.organigram']}" action="organigram?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:menuitem value="#{textResources['menu.timeline']}" action="timeline?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:menuitem value="#{textResources['menu.gmap']}" action="gmap?faces-redirect=true" actionListener="#{menuView.selectMenu(MenuButtons.DATA)}"/>
+		    			<p:menuitem value="#{textResources['app.more.example']}" url="https://www.primefaces.org/showcase/" target="_blank"/>
 		    		</p:submenu>
-		    		<p:menuitem value="My Custom Components" action="custom?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.CUSTOM) ? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.CUSTOM)}"/>
+		    		<p:menuitem value="#{textResources['menu.custom.components']}" action="custom?faces-redirect=true" class="#{menuView.selectedItem.equals(MenuButtons.CUSTOM) ? 'active': ''}" actionListener="#{menuView.selectMenu(MenuButtons.CUSTOM)}"/>
+		    	
+		    		<f:facet name="options">
+			    		<p:selectOneMenu id="advanced" value="#{menuView.theme}" style="width:160px;margin-right:10px" >
+			    			<f:selectItems value="#{menuView.themes}" var="theme" itemLabel="#{theme.displayName}" itemValue="#{theme.name}" />	
+			    			<f:ajax event="change" listener="#{menuView.changeTheme()}"/>		           
+			        	</p:selectOneMenu>
+			            <h:commandButton styleClass="button-language" image="#{resource['images/brazil.png']}" action="#{menuView.changeLocaleBR()}"/>
+			            <h:commandButton styleClass="button-language" image="#{resource['images/eua.png']}" action="#{menuView.changeLocaleUS()}"/>
+			        </f:facet>
 		    	</p:menubar>
     		</div>
     	</h:form>
-   		<div class="content">
+   		<div class="content" id="content">
 	        <ui:insert name="general_content" />
    		</div>
    		<div class="footer">
-   			<span>Aqui é o footer, pode ser adicionado qualquer coisa aqui</span>
+   			<span>#{textResources['app.footer']}</span>
    		</div>
     </h:body>
 </ui:composition>

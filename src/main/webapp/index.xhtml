@@ -6,8 +6,9 @@
     template="menu.xhtml">
 
         <ui:define name="general_content">
+        	<h:inputHidden  value="#{homeView.loadIndex}"/>
         	<div style="height: 100%; width: 100%; text-align: center;">
-        		<h2>Primefaces Show Case - Estudo JSF</h2>
+        		<h2>#{textResources['index.title']}</h2>
         	</div>
         </ui:define>
 

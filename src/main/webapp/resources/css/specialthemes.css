@@ -1,0 +1,54 @@
+@CHARSET "ISO-8859-1";
+
+/*------------- Theme Le-Frog ---------------------------*/
+.theme_le-frog .header, .theme_le-frog .footer {
+    background: #285c00 url(/demoJSF/javax.faces.resource/images/ui-bg_inset-soft_10_285c00_1x100.png.xhtml?ln=primefaces-le-frog) 50% bottom repeat-x;
+    color: #ffffff;
+}
+
+.theme_le-frog #content::-webkit-scrollbar-thumb
+{
+	background-color: #285c00;
+}
+
+
+/*------------- Theme Eggplant ---------------------------*/
+.theme_eggplant .header, .theme_eggplant .footer {
+    background: #3d3644 url(/demoJSF/javax.faces.resource/images/ui-bg_gloss-wave_30_3d3644_500x100.png.xhtml?ln=primefaces-eggplant) 50% top repeat-x;
+    color: #ffffff;
+}
+
+/*------------- Theme Sunny ---------------------------*/
+.theme_sunny .header, .theme_sunny .footer {
+    background: #feeebd url(/demoJSF/javax.faces.resource/images/ui-bg_highlight-soft_100_feeebd_1x100.png.xhtml?ln=primefaces-sunny) 50% top repeat-x;
+    color: #383838;
+}
+
+.theme_sunny #content::-webkit-scrollbar-thumb
+{
+	background-color: #ffdd57;
+}
+
+/*------------- Theme Swanky Purse ---------------------------*/
+.theme_swanky-purse .header, .theme_swanky-purse .footer {
+    background: #443113 url(/demoJSF/javax.faces.resource/images/ui-bg_diamond_8_443113_10x8.png.xhtml?ln=primefaces-swanky-purse) 50% 50% repeat;
+    color: #efec9f;
+}
+
+.theme_swanky-purse #content::-webkit-scrollbar-thumb
+{
+	background-color: #443113;
+}
+
+/*------------- Theme Trontastic ---------------------------*/
+.theme_trontastic .header, .theme_trontastic .footer {
+    background: #000000 url(/demoJSF/javax.faces.resource/images/ui-bg_gloss-wave_55_000000_500x100.png.xhtml?ln=primefaces-trontastic) 50% top repeat-x;
+    color: #ffffff;
+}
+
+.theme_trontastic #content::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+

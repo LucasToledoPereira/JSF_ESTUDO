@@ -1,0 +1,67 @@
+@CHARSET "ISO-8859-1";
+
+
+/*------------- Theme Afterdark ---------------------------*/
+.theme_afterdark .header, .theme_afterdark .footer {
+    color: #dddddd;
+    background-color: #4d4d4d;
+    background: -moz-radial-gradient(50% 75%,circle,#676767,#343434);
+    background: -webkit-radial-gradient(50% 75%,circle,#676767,#343434);
+    background: -o-radial-gradient(50% 75%,circle,#676767,#343434);
+    background: -ms-radial-gradient(50% 75%,circle,#676767,#343434);
+    background: radial-gradient(50% 75%,circle,#676767,#343434);
+}
+
+
+/*------------- Theme Cruze ---------------------------*/
+.theme_cruze .header, .theme_cruze .footer {
+	background-color: #575757;
+	color:#eeeeee;
+}
+
+
+/*------------- Theme Dark Hive ---------------------------*/
+.theme_dark-hive .header, .theme_dark-hive .footer {
+    background: #000000 url(/demoJSF/javax.faces.resource/images/ui-bg_loop_25_000000_21x21.png.xhtml?ln=primefaces-dark-hive) 50% 50% repeat;
+    color: #ffffff;
+}
+
+/*------------- Theme Dot Luv ---------------------------*/
+.theme_dot-luv .header, .theme_dot-luv .footer {
+    background: #111111 url(/demoJSF/javax.faces.resource/images/ui-bg_gloss-wave_20_111111_500x100.png.xhtml?ln=primefaces-dot-luv) 50% top repeat-x;
+    color: #d9d9d9;
+}
+
+/*------------- Theme Midnight ---------------------------*/
+.theme_midnight .header, .theme_midnight .footer {
+    background: #18181f url(/demoJSF/javax.faces.resource/images/ui-bg_flat_100_18181f_40x100.png.xhtml?ln=primefaces-midnight) 50% 50% repeat-x;
+    color: #dfdfe3;
+}
+
+/*------------- Theme Mint Choc ---------------------------*/
+.theme_mint-choc .header, .theme_mint-choc .footer {
+    background: #201913 url(/demoJSF/javax.faces.resource/images/ui-bg_inset-soft_10_201913_1x100.png.xhtml?ln=primefaces-mint-choc) 50% bottom repeat-x;
+    color: #ffffff;
+}
+
+/*------------- Theme UI Darkness ---------------------------*/
+.theme_ui-darkness .header, .theme_ui-darkness .footer {
+    background: #000000 url(/demoJSF/javax.faces.resource/images/ui-bg_inset-soft_25_000000_1x100.png.xhtml?ln=primefaces-ui-darkness) 50% bottom repeat-x;
+    color: #ffffff;
+}
+
+.theme_ui-darkness #content::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+/*------------- Theme Vader ---------------------------*/
+.theme_vader .header, .theme_vader .footer {
+    background: #121212 url(/demoJSF/javax.faces.resource/images/ui-bg_gloss-wave_16_121212_500x100.png.xhtml?ln=primefaces-vader) 50% top repeat-x;
+    color: #eeeeee;
+}
+
+.theme_vader #content::-webkit-scrollbar-thumb
+{
+	background-color: #121212;
+}

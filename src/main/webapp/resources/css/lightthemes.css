@@ -1,0 +1,78 @@
+@CHARSET "ISO-8859-1";
+
+/*------------- Theme Afternoon ---------------------------*/
+.theme_afternoon .header, .theme_afternoon .footer {
+	color: #000000;
+    background-color: #ffffff;
+    background: -moz-radial-gradient(50% 75%,circle,#ffffff,#e6e6e6);
+    background: -webkit-radial-gradient(50% 75%,circle,#ffffff,#e6e6e6);
+    background: -o-radial-gradient(50% 75%,circle,#ffffff,#e6e6e6);
+    background: -ms-radial-gradient(50% 75%,circle,#ffffff,#e6e6e6);
+    background: radial-gradient(50% 75%,circle,#ffffff,#e6e6e6);
+}
+
+.theme_afternoon .ui-menuitem-link.ui-corner-all.active, .theme_afternoon .ui-widget.ui-menuitem.ui-corner-all.ui-menu-parent.active {
+	border-bottom: 2px solid black;
+}
+
+.theme_afternoon #content::-webkit-scrollbar-thumb
+{
+	background-color: #cceeff;
+}
+
+
+
+/*------------- Theme Afterwork ---------------------------*/
+.theme_afterwork .ui-menuitem-link.ui-corner-all.active, .theme_afterwork .ui-widget.ui-menuitem.ui-corner-all.ui-menu-parent.active {
+	border-bottom: 2px solid black;
+}
+
+.theme_afterwork .header, .theme_afterwork .footer {
+    color: #000000;
+    background-color: #eeeeee;
+    background: -moz-radial-gradient(50% 75%,circle,#eeeeee,#eeeeee);
+    background: -webkit-radial-gradient(50% 75%,circle,#eeeeee,#eeeeee);
+    background: -o-radial-gradient(50% 75%,circle,#eeeeee,#eeeeee);
+    background: -ms-radial-gradient(50% 75%,circle,#eeeeee,#eeeeee);
+    background: radial-gradient(50% 75%,circle,#eeeeee,#eeeeee);
+}
+
+/*------------- Theme Aristo ---------------------------*/
+.theme_aristo .header, .theme_aristo .footer {
+	background: #c4c4c4 url(/demoJSF/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.xhtml?ln=primefaces-aristo) top repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: #c4c4c4 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0
+}
+
+.theme_aristo .ui-menuitem-link.ui-corner-all.active, .theme_aristo .ui-widget.ui-menuitem.ui-corner-all.ui-menu-parent.active {
+	border-bottom: 2px solid black;
+}
+
+/*------------- Theme Black Tie ---------------------------*/
+.theme_black-tie .header, .theme_black-tie .footer {
+	border: 1px solid #cccccc;
+    background: #f9f9f9 url(/demoJSF/javax.faces.resource/images/ui-bg_highlight-hard_100_f9f9f9_1x100.png.xhtml?ln=primefaces-black-tie) 50% top repeat-x;
+    color: #222222;
+}
+
+.theme_black-tie .ui-menuitem-link.ui-corner-all.active, .theme_black-tie .ui-widget.ui-menuitem.ui-corner-all.ui-menu-parent.active {
+	border-bottom: 2px solid black;
+}
+
+/*------------- Theme Overcast ---------------------------*/
+.theme_overcast .header, .theme_overcast .footer {
+    background: #c9c9c9 url(/demoJSF/javax.faces.resource/images/ui-bg_inset-soft_50_c9c9c9_1x100.png.xhtml?ln=primefaces-overcast) 50% bottom repeat-x;
+    color: #333333;
+}
+
+.theme_overcast .ui-menuitem-link.ui-corner-all.active, .theme_overcast .ui-widget.ui-menuitem.ui-corner-all.ui-menu-parent.active {
+	border-bottom: 2px solid black;
+}
+
+
+
+
+
+
+
